@@ -1,6 +1,7 @@
 - defaults:
     link:
       relink: true
+      force: true
 
 - clean: ['~']
 
@@ -14,6 +15,7 @@
     ~/.Xresources: .Xresources
 
 - create:
+    - ~/.local/bin
     - ~/Downloads
     - ~/Screenshots
     - ~/Projects

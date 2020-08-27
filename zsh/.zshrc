@@ -10,7 +10,7 @@ zstyle :compinstall filename '/home/seqre/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-export EDITOR=vim
+export EDITOR=nvim
 export PS1=" > "
 
 alias grep='grep --color=auto'

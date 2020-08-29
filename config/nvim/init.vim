@@ -27,11 +27,19 @@ inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 call plug#begin()
-Plug 'scrooloose/syntastic'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-Plug 'aklt/plantuml-syntax'
-Plug 'tyru/open-browser.vim'
-Plug 'weirongxu/plantuml-previewer.vim'
+" Syntax
+Plug 'dense-analysis/ale'		" asynchronous lint engine
+Plug 'scrooloose/nerdtree'		" file system explorer
+Plug 'xuyuanp/nerdtree-git-plugin'	" git status flags for NERDTree
+Plug 'tpope/vim-surround'		" surroundings
+Plug 'tpope/vim-fugitive'		" git wrapper
+Plug 'sheerun/vim-polyglot'		" collection of language packs
+"Plug 'aklt/plantuml-syntax'
+Plug 'tyru/open-browser.vim'		" opening browser from vim
+Plug 'tpope/vim-sensible'		" defaults
+Plug 'weirongxu/plantuml-previewer.vim'	" plantuml previewe:
+Plug 'vim-airline/vim-airline'		" statur/tabline
+Plug 'valloric/youcompleteme'		" code-completion engine
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }	" fuzzy finder
+Plug 'junegunn/fzf.vim'
 call plug#end()

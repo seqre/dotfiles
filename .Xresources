@@ -41,8 +41,9 @@
 *.italicFont: 		xft:Hack:style=Italic:size=9
 *.boldItalicFont: 	xft:Hack:style=Bold Italic:size=9
 
-!! URxvt specific
-URxvt.urlLauncher: 	brave
-URxvt.underlineURLs: 	true
-URxvt.urlButton: 	1
-URxvt.scrollBar: 	false
+!! XTerm specific
+XTerm.termName:			xterm-256color
+XTerm.vt100.selectToClipboard:	true
+XTerm.vt100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)

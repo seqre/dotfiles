@@ -1,0 +1,3 @@
+- link:
+    ~/.xinitrc: windowmanager/.xinitrc
+    ~/.Xresources: windowmanager/.Xresources

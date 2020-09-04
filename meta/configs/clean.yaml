@@ -1,0 +1,4 @@
+- clean:
+    ~/:
+    ~/.config:
+      recursive: true

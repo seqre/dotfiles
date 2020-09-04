@@ -1,0 +1,3 @@
+- link:
+    ~/.zshrc: shells/zsh/.zshrc
+    ~/.zprofile: shells/zsh/.zprofile

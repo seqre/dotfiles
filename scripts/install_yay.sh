@@ -5,7 +5,7 @@ if [[ -f "/usr/bin/yay" ]]; then
   exit 0
 fi
 
-sudo pacman -S --needed base-devel
+sudo pacman -S --needed --noconfirm base-devel
 dir=$(mktemp -d)
 git clone https://aur.archlinux.org/yay.git $dir
 cd $dir

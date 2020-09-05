@@ -5,7 +5,7 @@ if [[ -f "/usr/bin/zsh" ]]; then
   exit 0
 fi
 
-sudo pacman -S --needed zsh
+sudo pacman -S --needed --noconfirm zsh
 
 if [[ -f "usr/bin/zsh" ]]; then
   echo "zsh installed correctly"

@@ -1,3 +1,7 @@
+- shell:
+    - ["chmod +x ./scripts/install_zsh.sh", "Making zsh installation script executable"]
+    - ["./scripts/install_zsh.sh", "Installing zsh"]
+
 - link:
     ~/.zshrc: shells/zsh/.zshrc
     ~/.zprofile: shells/zsh/.zprofile

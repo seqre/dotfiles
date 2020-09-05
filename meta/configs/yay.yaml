@@ -1,0 +1,3 @@
+- shell:
+    - ["chmod +x ./scripts/install_yay.sh", "Making yay installation script executable"]
+    - ["./scripts/install_yay.sh", "Installing yay"]

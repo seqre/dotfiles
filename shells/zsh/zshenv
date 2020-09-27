@@ -1,0 +1,4 @@
+# ZSHENV
+
+export EDITOR=nvim
+export PATH="${PATH}:/home/${USER}/.local/bin"

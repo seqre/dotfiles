@@ -3,5 +3,7 @@
     - ["./scripts/install_zsh.sh", "Installing zsh"]
 
 - link:
-    ~/.zshrc: shells/zsh/.zshrc
-    ~/.zprofile: shells/zsh/.zprofile
+    ~/.zshrc: shells/zsh/zshrc
+    ~/.zprofile: shells/zsh/zprofile
+    ~/.zshenv: shells/zsh/zshenv
+    ~/.zlogin: shells/zsh/zlogin

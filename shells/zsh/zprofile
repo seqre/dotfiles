@@ -1,0 +1,7 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.zshrc ]] && . ~/.zshrc
+
+[[ "$(tty)" == "/dev/tty1" ]] && startx -- -dpi 192

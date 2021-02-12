@@ -1,0 +1,9 @@
+[Unit]
+Description=Run cleaning Downloads daily
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target

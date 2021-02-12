@@ -1,0 +1,5 @@
+[Unit]
+Description=Remove files older than 7 days from Downloads
+
+[Service]
+ExecStart=/usr/bin/find ~/Downloads -atime +7 -delete

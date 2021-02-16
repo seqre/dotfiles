@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	dmenu_run
+	rofi -show combi
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -19,8 +19,8 @@ super + Escape
 #
 
 # screenshot
-super + Insert
-	import ~/Screenshots/"Screenshot-$(date -Iseconds).png"
+super {_,shift +} Print
+	scrot {_,-s -f -l style=dash,width=2} ~/Screenshots/"Screenshot-$(date -Iseconds).png"
 
 #
 # bspwm hotkeys

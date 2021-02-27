@@ -19,7 +19,7 @@ super + Escape
 #
 
 # screenshot
-super {_,shift +} Print
+super {Print,shift + s} 
 	scrot {_,-s -f -l style=dash,width=2} ~/Screenshots/"Screenshot-$(date -Iseconds).png"
 
 #

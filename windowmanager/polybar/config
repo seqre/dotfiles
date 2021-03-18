@@ -29,10 +29,12 @@ alert = #bd2c40
 
 [bar/seqre]
 width = 100%
-height = 27
+height = 54
 radius = 6.0
 fixed-center = false
 bottom = false
+
+dpi = 192
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -59,6 +61,8 @@ modules-right = xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temp
 
 tray-position = right
 tray-padding = 2
+tray-scale = 1.0
+tray-maxsize = 50
 ;tray-background = #0063ff
 
 wm-restack = bspwm
@@ -196,7 +200,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp0s25 
+interface = enp0s31f6
 interval = 3.0
 
 format-connected-underline = #55aa55

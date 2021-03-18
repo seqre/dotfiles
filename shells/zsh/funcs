@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+#
+# Custom functions
+#
+
+md() {
+	if [[ $# -ne 1 ]]; then
+		echo "Only one directory should be provided"
+	else
+		mkdir -p "$1" && cd "$1"
+	fi
+}

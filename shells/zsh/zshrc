@@ -13,7 +13,6 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 
 # The following lines were added by compinstall
-
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
 zstyle :compinstall filename '/home/seqre/.zshrc'
@@ -23,6 +22,8 @@ compinit
 promptinit
 prompt adam2
 # End of lines added by compinstall
+
+source .funcs
 
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'

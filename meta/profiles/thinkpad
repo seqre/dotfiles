@@ -1,7 +1,6 @@
 clean
 yay
 zsh
-arch_packages
 bspwm
 nvim
 polybar

@@ -1,1 +1,7 @@
+#!/usr/bin/env sh
+
+#
+# LOGIN SCRIPT
+#
+
 screenfetch -E

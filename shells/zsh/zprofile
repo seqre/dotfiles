@@ -1,5 +1,7 @@
+#!/usr/bin/env sh
+
 #
-# ~/.bash_profile
+# PROFILE SCRIPT
 #
 
 [[ -f ~/.zshrc ]] && . ~/.zshrc

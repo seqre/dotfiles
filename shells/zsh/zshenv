@@ -1,4 +1,17 @@
-# ZSHENV
+#!/usr/bin/env sh
+
+#
+# ENVIRONMENT VARIABLES
+#
+
+typeset -U PATH path
+path=("/home/${USER}/.local/bin" "${path[@]}")
+export PATH
 
 export EDITOR=nvim
-export PATH="${PATH}:/home/${USER}/.local/bin"
+
+
+# HiDPI
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export GDK_SCALE=2
+export GDK_DPI_SCALE=0.5

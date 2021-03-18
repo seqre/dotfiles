@@ -20,7 +20,7 @@ super + Escape
 
 # screenshot
 super {Print,shift + s} 
-	scrot {_,-s -f -l style=dash,width=2} ~/Screenshots/"Screenshot-$(date -Iseconds).png"
+	flameshot {screen,gui}
 
 #
 # bspwm hotkeys

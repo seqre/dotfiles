@@ -142,5 +142,3 @@ Plug 'chiel92/vim-autoformat'
 " To consider in future:
 " - colorscheme
 call plug#end()
-
-autocmd BufWrite * :Autoformat

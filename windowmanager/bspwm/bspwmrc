@@ -1,14 +1,12 @@
 #! /bin/sh
 
 {
-	killall -q sxhkd;			sxhkd &
-	killall -q polybar;		polybar seqre &
-
-	killall -q picom;			picom &
-} >/dev/null 2>*1
+	killall -q sxhkd;				sxhkd &
+	killall -q polybar;			polybar seqre &
+} >/dev/null 2>&1
 
 # Fixes some Java window problems
-# wmname LG3D
+wmname LG3D
 
 nitrogen --set-scaled /usr/share/backgrounds/2289864.svg
 
@@ -25,3 +23,4 @@ bspc rule -a mpv state=fullscreen
 bspc rule -a URxvt state=floating center=on
 bspc rule -a XTerm state=floating center=on
 bspc rule -a Gimp state=floating
+bspc rule -a jetbrains-toolbox state=floating

@@ -22,6 +22,18 @@ super + Escape
 super {Print,shift + s} 
 	flameshot {screen,gui}
 
+super + shift + v
+	sleep 1 && xdotool type --delay 80 "$(xclip -o)"
+
+super + F12
+	firefox
+
+XF86Audio{Lower,Raise}Volume
+	pactl set-sink-volume @DEFAULT_SINK@ {-,+}5%
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
 #
 # bspwm hotkeys
 #

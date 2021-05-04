@@ -1,6 +1,6 @@
 configuration {
 /* NON DEFAULT VALUES */
-	modi: "run,ssh,combi";
+	modi: "run";
 	font: "Hack 9";
 	show-icons: true;
 	icon-theme: "Papirus";

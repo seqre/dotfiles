@@ -26,9 +26,11 @@ prompt adam2
 source .funcs
 
 alias grep='grep --color=auto'
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias la='ls -a'
 alias lA='ls -A'
 
 source /home/seqre/.config/broot/launcher/bash/br
 alias airpods="bluetoothctl power on && bluetoothctl connect 80:82:23:9D:5E:F4"
+
+eval "$(rbenv init -)"

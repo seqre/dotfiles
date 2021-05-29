@@ -7,4 +7,5 @@
     ~/.zprofile:    shells/zsh/zprofile
     ~/.zshenv:      shells/zsh/zshenv
     ~/.zlogin:      shells/zsh/zlogin
-    ~/.funcs:       shells/zsh/funcs
+    ~/.funcs:       shells/general/funcs
+    ~/.aliases:     shells/general/aliases

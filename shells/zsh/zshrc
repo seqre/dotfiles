@@ -4,33 +4,24 @@
 # ZSHRC
 #
 
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE="${HOME}/.history"
 HISTSIZE=2048
 SAVEHIST=4096
+
 setopt autocd
-bindkey -e
-# End of lines configured by zsh-newuser-install
+setopt hist_ignore_space
 
-# The following lines were added by compinstall
-zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
-zstyle :compinstall filename '/home/seqre/.zshrc'
-
-autoload -Uz compinit promptinit
+autoload -Uz compinit #promptinit
 compinit
-promptinit
-prompt adam2
-# End of lines added by compinstall
+#promptinit
+#prompt gentoo
 
-source .funcs
+zstyle ':completion::complete:*' use-cache 1
+zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*:warnings' format '%BSorry, no matches for: %b'
 
-alias grep='grep --color=auto'
-alias ls='ls --color=auto --group-directories-first'
-alias la='ls -a'
-alias lA='ls -A'
+[[ -f ~/.funcs ]] && source ~/.funcs
+[[ -f ~/.aliases ]] && source ~/.aliases
 
-source /home/seqre/.config/broot/launcher/bash/br
-alias airpods="bluetoothctl power on && bluetoothctl connect 80:82:23:9D:5E:F4"
-
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
+eval "$(starship init zsh)"

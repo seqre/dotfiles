@@ -141,4 +141,9 @@ Plug 'chiel92/vim-autoformat'
 
 " To consider in future:
 " - colorscheme
+
+" Pywal compatibility
+Plug 'dylanaraps/wal.vim'
 call plug#end()
+
+colorscheme wal

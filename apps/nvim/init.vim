@@ -82,10 +82,10 @@ Plug 'junegunn/vim-plug'
 Plug 'tpope/vim-sensible'
 
 " Git wrapper
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 
 " Comment stuff out
-Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-commentary'
 
 " NERDTree - a file system explorer
 Plug 'scrooloose/nerdtree' ", { 'on': 'NERDTreeToggle' }
@@ -94,7 +94,7 @@ Plug 'scrooloose/nerdtree' ", { 'on': 'NERDTreeToggle' }
 Plug 'xuyuanp/nerdtree-git-plugin' ", { 'on': 'NERDTreeToggle' }
 
 " NERDTree filetype-specific icons
-" Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 
 " NERDTree syntax highlighting
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -106,7 +106,7 @@ Plug 'dense-analysis/ale'
 Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --all' }
 
 " Surroundings (parentheses, brackets, quotes, and more)
-Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-surround'
 
 " Tag browser
 Plug 'preservim/tagbar'
@@ -125,7 +125,7 @@ Plug 'junegunn/fzf.vim'
 " Plug 'mattn/emmet-vim'
 
 " Visual display of indent levels
-" Plug 'yggdroot/indentline'
+Plug 'yggdroot/indentline'
 
 " Snippets
 " Plug 'SirVer/ultisnips'
@@ -136,14 +136,29 @@ Plug 'junegunn/fzf.vim'
 " Collection of language packs
 Plug 'sheerun/vim-polyglot'
 
+" Used for formatting tables in Markdown
+Plug 'godlygeek/tabular'
+
 " Code formatting
 Plug 'chiel92/vim-autoformat'
 
 " To consider in future:
 " - colorscheme
 
+" Kitty config coloring
+Plug 'fladson/vim-kitty'
+
 " Pywal compatibility
 Plug 'dylanaraps/wal.vim'
 call plug#end()
 
 colorscheme wal
+
+let g:ale_linters = {'haskell': ['cabal_ghc', 'ghc_mod', 'hdevtools', 'hie', 'hlint', 'stack_build', 'stack_ghc']}
+
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+" Format code on saving
+"au BufWrite * :Autoformat

@@ -5,13 +5,29 @@
 #
 
 alias grep='grep --color=auto'
+alias ip='ip -c'
 alias ls='ls --color=auto --group-directories-first'
+alias ll='ls -l'
 alias la='ls -a'
 alias lA='ls -A'
-
-alias emerge="time emerge --ask"
+alias tree='tree --dirsfirst -C'
 
 alias vim='nvim'
 alias v='nvim'
 
-alias airpods="bluetoothctl power on && bluetoothctl connect 80:82:23:9D:5E:F4"
+alias here='xfce4-terminal'
+
+alias sudo='doas'
+alias airpods='bluetoothctl power on && bluetoothctl connect 80:82:23:9D:5E:F4'
+
+#alias esearch='/usr/bin/emerge -s'
+#alias emerge='doas emerge --ask --ask-enter-invalid --load-average=9'
+#alias eupdate='emerge --update --deep --changed-use --columns --keep-going @world'
+#alias eclean='emerge --depclean'
+#alias eremove='emerge --deselect'
+#alias uses='equery uses'
+#alias check-ccache='CCACHE_DIR=/var/cache/ccache ccache -sv'
+
+#alias prime-run='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
+
+alias p1='ping 1.1.1.1'

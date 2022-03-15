@@ -6,4 +6,6 @@
 
 [[ -f ~/.zshrc ]] && . ~/.zshrc
 
-[[ "$(tty)" == "/dev/tty1" ]] && startx -- -dpi 192
+eval "$(ssh-agent)"
+
+#[[ "$(tty)" == "/dev/tty1" ]] && startx

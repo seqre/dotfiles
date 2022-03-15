@@ -11,17 +11,22 @@ SAVEHIST=4096
 setopt autocd
 setopt hist_ignore_space
 
+fpath=(~/.config/zsh/completions $fpath)
 autoload -Uz compinit #promptinit
 compinit
-#promptinit
-#prompt gentoo
 
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %b'
 
+[[ -f ~/.zshenv ]] && source ~/.zshenv
 [[ -f ~/.funcs ]] && source ~/.funcs
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-#eval "$(rbenv init -)"
-eval "$(starship init zsh)"
+if command -v starship &> /dev/null; then
+	eval "$(starship init zsh)"
+fi
+
+if command -v thefuck &> /dev/null; then
+	eval "$(thefuck --alias)"
+fi

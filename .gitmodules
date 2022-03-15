@@ -2,6 +2,3 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "plugins/dotbot-yay"]
-	path = plugins/dotbot-yay
-	url = https://github.com/oxson/dotbot-yay

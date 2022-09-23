@@ -4,10 +4,26 @@
 # ENVIRONMENT VARIABLES
 #
 
+# PATH management
 typeset -U PATH path
-path=("/home/${USER}/.local/bin" "${path[@]}" "/home/${USER}/.go/bin" "/home/${USER}/Packages/flutter/bin" "/home/${USER}/.cargo/bin")
+path=("/home/${USER}/.local/bin" "${path[@]}" "/home/${USER}/.go/bin" "/home/${USER}/.cargo/bin" "/opt/flutter/bin")
 export PATH
 
+# Basic XDG variables
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_DATA_HOME="${HOME}/.local/share"
+
+# Cleaning $HOME
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
+
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+
+# Best editor
 export EDITOR=nvim
 
 # HiDPI

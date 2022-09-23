@@ -5,7 +5,7 @@ add_newline = true
 threshold = 15
 
 [directory]
-fish_style_pwd_dir_length = 1
+fish_style_pwd_dir_length = 3
 
 [git_commit]
 tag_disabled = false

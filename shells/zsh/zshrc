@@ -3,6 +3,7 @@
 #
 # ZSHRC
 #
+[[ -f ~/.zshenv ]] && source ~/.zshenv
 
 HISTFILE="${HOME}/.history"
 HISTSIZE=2048
@@ -13,13 +14,12 @@ setopt hist_ignore_space
 
 fpath=(~/.config/zsh/completions $fpath)
 autoload -Uz compinit #promptinit
-compinit
+compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump-${ZSH_VERSION}"
 
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %b'
 
-[[ -f ~/.zshenv ]] && source ~/.zshenv
 [[ -f ~/.funcs ]] && source ~/.funcs
 [[ -f ~/.aliases ]] && source ~/.aliases
 

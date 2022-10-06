@@ -4,8 +4,4 @@
 # PROFILE SCRIPT
 #
 
-[[ -f ~/.zshrc ]] && . ~/.zshrc
-
-eval "$(ssh-agent)"
-
-#[[ "$(tty)" == "/dev/tty1" ]] && startx
+#[[ -f ~/.zshrc ]] && . ~/.zshrc

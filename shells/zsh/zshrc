@@ -3,30 +3,42 @@
 #
 # ZSHRC
 #
-[[ -f ~/.zshenv ]] && source ~/.zshenv
 
-HISTFILE="${HOME}/.history"
-HISTSIZE=2048
-SAVEHIST=4096
+bindkey -v
+export KEYTIMEOUT=1
 
 setopt autocd
 setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups
 
 fpath=(~/.config/zsh/completions $fpath)
-autoload -Uz compinit #promptinit
+autoload -Uz compinit
 compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump-${ZSH_VERSION}"
 
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %b'
 
-[[ -f ~/.funcs ]] && source ~/.funcs
-[[ -f ~/.aliases ]] && source ~/.aliases
+source_files=(
+	"${HOME}/.funcs"
+	"${HOME}/.aliases"
+	"/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+	)
+for f in "${source_files[@]}"; do
+	[[ -f $f ]] && source $f
+done
 
-if command -v starship &> /dev/null; then
-	eval "$(starship init zsh)"
-fi
-
-if command -v thefuck &> /dev/null; then
-	eval "$(thefuck --alias)"
-fi
+eval_commands=(
+	"starship init zsh"
+	"thefuck --alias"
+	)
+for ec in "${eval_commands[@]}"; do
+	com=$(cut -d' ' -f1 <<< "$ec")
+	if command -v "$com" &> /dev/null; then
+		eval "$(eval "$ec")"
+	fi
+done

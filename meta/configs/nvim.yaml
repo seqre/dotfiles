@@ -1,2 +1,5 @@
+- shell:
+  - ["git -C ~/.config/nvim pull || git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1", "Installing NvChad"]
+
 - link:
-    ~/.config/nvim: apps/nvim
+    ~/.config/nvim/lua/custom: apps/nvim/nvchad-custom/

@@ -19,6 +19,7 @@ alias v='nvim'
 alias sudo='sudo -v; sudo '
 
 alias scl='systemctl'
+alias jcl='journalctl'
 alias here='gnome-terminal --tab'
 
 alias p1='ping 1.1.1.1'

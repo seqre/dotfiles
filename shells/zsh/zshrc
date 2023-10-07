@@ -8,6 +8,7 @@ bindkey -v
 export KEYTIMEOUT=1
 
 setopt autocd
+setopt appendhistory
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_ignore_dups

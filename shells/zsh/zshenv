@@ -12,6 +12,7 @@ path=(
 	"/home/${USER}/.go/bin"
 	"/home/${USER}/.cargo/bin"
 	"/opt/flutter/bin"
+  "/home/${USER}/.local/share/JetBrains/Toolbox/scripts"
 	)
 export PATH
 
@@ -23,6 +24,7 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 # ZSH variables
 #export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 #export HISTFILE="$ZDOTDIR/.zhistory"
+export HISTFILE="$XDG_CONFIG_HOME/.zhistory"
 export HISTSIZE=2048
 export SAVEHIST=4096
 
@@ -46,3 +48,9 @@ export VISUAL=nvim
 
 # GPG
 export GPG_TTY=$(tty)
+
+# Java HiDPI
+#export JDK_JAVA_OPTIONS='-Dsun.java2d.uiScale=2'
+#if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+#  export MOZ_ENABLE_WAYLAND=1
+#fi

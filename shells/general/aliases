@@ -13,6 +13,7 @@ alias du='dust'
 alias grep='rg'
 alias htop='btm'
 alias ntop='bandwhich'
+alias cd='z'
 
 ## REST
 alias grep='grep --color=auto'

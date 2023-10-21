@@ -8,11 +8,11 @@
 typeset -U PATH path
 path=(
   "/home/${USER}/.local/bin"
-  "${path[@]}"
   "/home/${USER}/.go/bin"
   "/home/${USER}/.cargo/bin"
-  "/opt/flutter/bin"
   "/home/${USER}/.local/share/JetBrains/Toolbox/scripts"
+  "${path[@]}"
+  "/opt/flutter/bin"
 	)
 export PATH
 

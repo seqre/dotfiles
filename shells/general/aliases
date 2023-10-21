@@ -4,9 +4,20 @@
 # Aliases
 #
 
+## RUST ALTERNATIVES
+alias ls='eza --icons=auto --hyperlink --group-directories-first'
+alias cat='bat'
+alias find='fd'
+alias ps='procs'
+alias du='dust'
+alias grep='rg'
+alias htop='btm'
+alias ntop='bandwhich'
+
+## REST
 alias grep='grep --color=auto'
 alias ip='ip -c'
-alias ls='ls --color=auto --group-directories-first'
+#alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
 alias la='ls -a'
 alias lA='ls -A'

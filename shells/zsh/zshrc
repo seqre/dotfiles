@@ -34,8 +34,9 @@ for f in "${source_files[@]}"; do
 done
 
 eval_commands=(
-	"starship init zsh"
-	"thefuck --alias"
+  "starship init zsh"
+  "thefuck --alias"
+  "zoxide init zsh"
 	)
 for ec in "${eval_commands[@]}"; do
 	com=$(cut -d' ' -f1 <<< "$ec")

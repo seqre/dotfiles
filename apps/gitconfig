@@ -3,7 +3,7 @@
 [user]
 	email = git@seqre.dev
 	name = Marek 'seqre' Grzelak
-	signingkey = 513C70F034068120
+	signingkey = 9A682889E94F47ED!
 [commit]
 	gpgsign = true
 [alias]

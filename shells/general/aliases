@@ -14,6 +14,7 @@ alias grep='rg'
 alias htop='btm'
 alias ntop='bandwhich'
 alias cd='z'
+alias j='just --justfile $HOME/.config/justfile'
 
 ## REST
 alias grep='grep --color=auto'

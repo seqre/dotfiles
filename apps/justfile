@@ -1,0 +1,15 @@
+default:
+  @just --choose {{justfile()}}
+
+_cache_sudo:
+  @sudo -v
+
+alias e := edit
+edit:
+  @$EDITOR {{justfile()}}
+
+alias u := update
+update: _cache_sudo
+  sudo pacman -Syu --noconfirm
+  cargo binstall --no-confirm $(cargo install --list | grep -Eo '^[^ ]+')
+  

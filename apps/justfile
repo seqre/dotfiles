@@ -12,4 +12,5 @@ alias u := update
 update: _cache_sudo
   sudo pacman -Syu --noconfirm
   cargo binstall --no-confirm $(cargo install --list | grep -Eo '^[^ ]+')
+  rustup update
   

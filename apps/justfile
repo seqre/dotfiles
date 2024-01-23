@@ -1,16 +1,39 @@
 default:
   @just --choose {{justfile()}}
 
+exit:
+
 _cache_sudo:
   @sudo -v
 
+#
+# ALIASES
+#
+
 alias e := edit
+alias ru := rust_update
+alias u := update
+alias iu := interactive_update
+alias ua := update_all
+alias iua := interactive_update_all
+
+#
+# RECIPES
+#
+
 edit:
   @$EDITOR {{justfile()}}
 
-alias u := update
-update: _cache_sudo
-  sudo pacman -Syu --noconfirm
+rust_update:
   rustup update
   cargo binstall --no-confirm $(cargo install --list | grep -Eo '^[^ ]+')
+
+update:
+  sudo pacman -Syu --noconfirm
+
+interactive_update:
+  paru
+
+update_all: _cache_sudo update rust_update
   
+interactive_update_all: _cache_sudo interactive_update rust_update

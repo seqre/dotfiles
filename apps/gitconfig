@@ -11,6 +11,7 @@
   s = status
   ds = diff --staged
   c = commit
+	pushf = push --force-with-lease
 [init]
 	defaultBranch = main
 [pull]

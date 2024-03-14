@@ -7,14 +7,16 @@
 ## RUST ALTERNATIVES
 alias ls='eza --icons=auto --hyperlink --group-directories-first'
 alias cat='bat'
-alias find='fd'
-alias ps='procs'
-alias du='dust'
-alias grep='rg'
 alias htop='btm'
 alias ntop='bandwhich'
 alias cd='z'
-alias j='just --justfile $HOME/.config/justfile'
+alias j='just'
+alias jl='just --justfile $HOME/.config/justfile'
+
+alias find-rs='fd'
+alias ps-rs='procs'
+alias du-rs='dust'
+alias grep-rs='rg'
 
 ## REST
 alias grep='grep --color=auto'
@@ -35,5 +37,7 @@ alias sudo='sudo -v; sudo '
 alias scl='systemctl'
 alias jcl='journalctl'
 alias here='gnome-terminal --tab'
+
+alias g='git'
 
 alias p1='ping 1.1.1.1'

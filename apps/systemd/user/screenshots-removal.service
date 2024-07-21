@@ -2,4 +2,4 @@
 Description=Remove screenshots older than 7 days from Screenshots
 
 [Service]
-ExecStart=/usr/bin/find ~/Screenshots -name "Screenshot-*.png" -atime +7 -delete
+ExecStart=/usr/bin/find ~/Pictures/Screenshots -name "Screenshot-*.png" -atime +7 -delete

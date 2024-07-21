@@ -41,3 +41,5 @@ alias here='gnome-terminal --tab'
 alias g='git'
 
 alias p1='ping 1.1.1.1'
+
+alias spy='source venv/bin/activate'

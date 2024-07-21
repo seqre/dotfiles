@@ -26,7 +26,7 @@ edit:
 
 rust_update:
   rustup update
-  cargo binstall --no-confirm $(cargo install --list | grep -Eo '^[^ ]+')
+  cargo binstall --no-confirm $(cargo install --list | grep -Ev '):' | grep -Eo '^[^ ]+')
 
 update:
   sudo pacman -Syu --noconfirm

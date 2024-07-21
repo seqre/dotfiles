@@ -16,7 +16,16 @@
 	defaultBranch = main
 [pull]
 	rebase = true
+[maintenance]
+	repo = /home/seqre/Projects/secubot
+	repo = /home/seqre/Projects/dotfiles
+	repo = /home/seqre/Projects/notes
+	repo = /home/seqre/Projects/noseyparker
+[push]
+	autoSetupRemote = true
 [credential "https://github.com"]
+	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
+	helper = 
 	helper = !/usr/bin/gh auth git-credential
